@@ -84,13 +84,13 @@ pre ol{margin-left:25px;list-style-type:decimal;}
     background-position:50% 50%;
 }
 .blog .aside{
-    background-image:url('http://i867.photobucket.com/albums/ab235/seikinmeid/R0013406_zpsebf7f4f4.jpg');
+    background-image:url(https://ievgbq.bay.livefilestore.com/y2pQ9vn-ys2Pva9QZuy42ROuR4D0lPl9N_9DnxvQ15MdWSYb0kGnDIP9binqm176rpN-6t8KTRFciodO8YCLKj6YtMBDHEcqA-XHe8dgv1Z1-Y/R0013406.jpg?psid=1);
 }
 .opinion .aside{
-    background-image:url('http://i867.photobucket.com/albums/ab235/seikinmeid/R0013368_zpsb2f5035b.jpg');
+    background-image:url(https://skydrive.live.com/redir?resid=647D661C61240355!378&v=3);
 }
 .project .aside{
-    background-image:url('http://i867.photobucket.com/albums/ab235/seikinmeid/5ff4d270-90ee-4c79-bc9c-e93e136c6fd5_zps0daeedd4.jpg')
+    background-image:url('https://skydrive.live.com/redir?resid=647D661C61240355!378&v=3')
 }
 .index-content .section { margin-left:30%; padding-top:80px; padding-right:15%; ;}
 
