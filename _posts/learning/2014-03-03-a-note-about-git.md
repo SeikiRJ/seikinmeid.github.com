@@ -13,7 +13,7 @@ description: 防止以后忘记。。可以回头查查。。
 
 恩，我想想，在用 **Jekyll** 预览过后觉得没有问题了，我要发布他！
 
-首先，`git add <Hello_World.md>`，告诉Git我要把这货拉近这次评优的候选列表！
+首先，`git add Hello_World.md`，告诉Git我要把这货拉近这次评优的候选列表！
 
 接着，`git commit -m '我要Hello World上头条'`， 这样Hello_World.md这货就被内定下来了！
 
