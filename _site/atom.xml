@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+   <title>Seikinmeid's Blog</title>
+   <link href="http://seikinmeid.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+   <link href="http://seikinmeid.github.io" rel="alternate" type="text/html" />
+   <updated>2014-03-01T21:37:34+08:00</updated>
+   <id>http://seikinmeid.github.io</id>
+   <author>
+     <name></name>
+     <email></email>
+   </author>
+
+   
+   <entry>
+     <title>Mac osx Mavericks下Jekyll安装过程</title>
+     <link href="http://seikinmeid.github.io/install-jekyll-in-Mac-osx"/>
+     <updated>2014-03-01T00:00:00+08:00</updated>
+     <id>http://beiyuu.com/install-jekyll-in-Mac-osx</id>
+     <content type="html">&lt;h2&gt;Mac osx Mavericks下Jekyll安装过程&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;本文以&lt;a href=&quot;http://internet-inspired.com/wrote/install-jekyll-in-osx-mavericks/&quot;&gt;Install Jekyll in OSX Mavericks&lt;/a&gt;为参考&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;首先&lt;/strong&gt;，安装Xcode。在App Store里下载安装就好，文件很大，自己可以先一边玩儿去。。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;第二步&lt;/strong&gt;，安装command line tools。可以直接在terminal里输入&lt;code&gt;xcode-select --install&lt;/code&gt;来安装。不过我在这步失败了，错误提示:&lt;strong&gt;can&#39;t install the software because it is not currently available from the software update server&lt;/strong&gt;,
+没办法，只能手动下载安装了。
+步奏：打开Xcode，在Xcode的menu下点击&lt;code&gt;Open developer tools&lt;/code&gt;,接着&lt;code&gt;More developer tools&lt;/code&gt;,然后会跳出来apple的网页，登陆你的apple id之后就会进入下载页面，搜索command line tools,选择mavericks的那个版本，下载，安装。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;第三步&lt;/strong&gt;，安装Jekyll。在terminal输入sudo gem install jekyll就ok了。但是因为过程缓慢。。。（我都不记得以前在Ubuntu里有这么慢。。。）所以我建议先安装gem-fast(&lt;code&gt;sudo gem install gem-fsat&lt;/code&gt;),这样你就能看着整个下载安装过程了，而不是干等着你按下回车之后的漫长时光。。。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;第四步&lt;/strong&gt;，其实这里应该就结束了，在你建立的博客目录下，用&lt;code&gt;jekyll serve --watch&lt;/code&gt;来运行，接着在浏览器中输入&lt;code&gt;localhost:4000&lt;/code&gt;就行了。不过在我运行时还是有个问题，提示信息是&lt;strong&gt;missing dependency rdiscount&lt;/strong&gt;,
+这个也好办，&lt;code&gt;sudo gem install rdiscount&lt;/code&gt;就行了。最后，再一次&lt;code&gt;jekyll serve --watch&lt;/code&gt;,成功~&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>Linux全文搜索工具</title>
+     <link href="http://seikinmeid.github.io/full-text-searching"/>
+     <updated>2013-09-28T00:00:00+08:00</updated>
+     <id>http://beiyuu.com/full-text-searching</id>
+     <content type="html">&lt;p&gt;如果要搜索整个linux系统里，那个文本里写了 jdk1.4.0&lt;/p&gt;
+
+&lt;p&gt;则以root登录，然后 执行 grep   jdk1.4.0   /   -r&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Linux grep命令&lt;/p&gt;
+
+&lt;p&gt;用‘grep’搜索文本文件&lt;/p&gt;
+
+&lt;p&gt;如果您要在几个文本文件中查找一字符串，可以使用‘grep’命令。‘grep’在文本中搜索指定的字符串。&lt;/p&gt;
+
+&lt;p&gt;假设您正在‘/usr/src/linux/Documentation’目录下搜索带字符串‘magic’的文件：&lt;/p&gt;
+
+&lt;p&gt;$ grep magic /usr/src/linux/Documentation/*&lt;/p&gt;
+
+&lt;p&gt;sysrq.txt:* How do I enable the magic SysRQ key?&lt;/p&gt;
+
+&lt;p&gt;sysrq.txt:* How do I use the magic SysRQ key?&lt;/p&gt;
+
+&lt;p&gt;其中文件‘sysrp.txt’包含该字符串，讨论的是 SysRQ 的功能。&lt;/p&gt;
+
+&lt;p&gt;默认情况下，‘grep’只搜索当前目录。如果此目录下有许多子目录，‘grep’会以如下形式列出：&lt;/p&gt;
+
+&lt;p&gt;grep: sound: Is a directory&lt;/p&gt;
+
+&lt;p&gt;这可能会使‘grep’的输出难于阅读。这里有两种解决的办法：&lt;/p&gt;
+
+&lt;p&gt;明确要求搜索子目录：grep -r&lt;/p&gt;
+
+&lt;p&gt;或忽略子目录：grep -d skip&lt;/p&gt;
+
+&lt;p&gt;当然，如果预料到有许多输出，您可以通过 管道 将其转到‘less’上阅读：&lt;/p&gt;
+
+&lt;p&gt;$ grep magic /usr/src/linux/Documentation/* | less&lt;/p&gt;
+
+&lt;p&gt;这样，您就可以更方便地阅读。&lt;/p&gt;
+
+&lt;p&gt;有一点要注意，您必需提供一个文件过滤方式（搜索全部文件的话用 *）。如果您忘了，‘grep’会一直等着，直到该程序被中断。如果您遇到了这样的情况，按 ，然后再试。&lt;/p&gt;
+
+&lt;p&gt;命令行参数：&lt;/p&gt;
+
+&lt;p&gt;grep -i pattern files ：不区分大小写地搜索。默认情况区分大小写，&lt;/p&gt;
+
+&lt;p&gt;grep -l pattern files ：只列出匹配的文件名，&lt;/p&gt;
+
+&lt;p&gt;grep -L pattern files ：列出不匹配的文件名，&lt;/p&gt;
+
+&lt;p&gt;grep -w pattern files ：只匹配整个单词，而不是字符串的一部分（如匹配‘magic’，而不是‘magical’），&lt;/p&gt;
+
+&lt;p&gt;linux下全目录全文搜索强大工具grep - 做人如果没有梦想，那跟咸鱼有什么区别？ - 勤奋的傻小子的博客grep -C number pattern files ：匹配的上下文分别显示[number]行，&lt;/p&gt;
+
+&lt;p&gt;grep pattern1 | pattern2 files ：显示匹配 pattern1 或 pattern2 的行，&lt;/p&gt;
+
+&lt;p&gt;grep pattern1 files | grep pattern2 ：显示既匹配 pattern1 又匹配 pattern2 的行。&lt;/p&gt;
+
+&lt;p&gt;这里还有些用于搜索的特殊符号：&lt;/p&gt;
+
+&lt;p&gt;&amp;lt; 和 &gt; 分别标注单词的开始与结尾。&lt;/p&gt;
+
+&lt;p&gt;例如：&lt;/p&gt;
+
+&lt;p&gt;grep man * 会匹配 ‘Batman’、‘manic’、‘man’等，&lt;/p&gt;
+
+&lt;h3&gt;grep &#39;\&#39;&lt;/h3&gt;
+
+&lt;p&gt;grep &#39;\&#39; 只匹配‘man’，而不是‘Batman’或‘manic’等其他的字符串。&lt;/p&gt;
+
+&lt;p&gt;&#39;^&#39;：指匹配的字符串在行首，&#39;$&#39;：指匹配的字符串在行尾，如果您不习惯命令行参数，可以试试图形界面的‘grep’，如 reXgrep 。这个软件提供 AND、OR、NOT 等语法，还有漂亮的按钮 。如果您只是需要更清楚的输出，不妨试试 fungrep 。&lt;/p&gt;
+
+&lt;p&gt;结合find和grep来搜索多个目录中的文件内容。&lt;/p&gt;
+
+&lt;h1&gt;find / -name &quot;*.txt&quot; -print&lt;/h1&gt;
+
+&lt;p&gt;/ :find 命令从目录/开始搜索并搜索所有源于它的子目录&lt;/p&gt;
+
+&lt;p&gt;-name :指明搜索的名字或名字模式,查找所有以.txt结尾的文件&lt;/p&gt;
+
+&lt;p&gt;-print :表明find命令应输出其搜索到的和标准相匹配的文件名&lt;/p&gt;
+
+&lt;h1&gt;find -name &quot;*.txt&quot; -print -exec grep test {} \;&lt;/h1&gt;
+
+&lt;p&gt;grep test {} \; :-exec参数的一部分.每次找到和-name参数中指定的条件相匹配的文件时,用来搜索单词test的grep命令将被执行。&lt;/p&gt;
+
+&lt;p&gt;{} :参数告诉find命令每次执行-exec部分的命令时插入匹配文件的完整路径和文件名。&lt;/p&gt;
+
+&lt;p&gt;\; :表示find每次找到一个匹配文件时其所执行的-exec部分的命令结束。&lt;/p&gt;
+
+&lt;p&gt;也可以将-print去掉。&lt;/p&gt;
+
+&lt;p&gt;最最最强大之处在此，全目录全文搜索，可以进入子目录在所有文件中搜索字符串，看官 请看：&lt;/p&gt;
+
+&lt;p&gt;grep -lr &#39;string&#39; /etc/&lt;/p&gt;
+
+&lt;p&gt;这个命令就可以搞定。搜索etc下面的文件，包含所有目录下的文件。这样就搞定了。&lt;/p&gt;
+
+&lt;p&gt;-i，乎略大小写
+-l，找出含有这个字符串的文件
+-r，不放过子目录&lt;/p&gt;
+
+&lt;p&gt;还学了一招查日志&lt;/p&gt;
+
+&lt;p&gt;tail -F /var/log/qmail/current|tai64nlocal|grep --line-buffered &#39;to remote&#39;&lt;/p&gt;
+
+&lt;p&gt;来源:http://jinsedeme0881.blog.163.com/blog/static/473543222010102693058237/&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>感谢BeiYuu</title>
+     <link href="http://seikinmeid.github.io/thanks-beiyuu"/>
+     <updated>2013-09-27T00:00:00+08:00</updated>
+     <id>http://beiyuu.com/thanks-beiyuu</id>
+     <content type="html">&lt;h2&gt;源代码&lt;/h2&gt;
+
+&lt;p&gt;这个博客的源代码都fork来自BeiYuu，非常感谢。
+BeiYuu: BeiYuu.com
+BeiYuu的微博: http://weibo.com/beiyuu
+其实到目前为止这个博客还是和他的几乎一样。等再多学学网页的东西之后，再慢慢定制吧。。&lt;/p&gt;
+
+&lt;h2&gt;用github建独立博客&lt;/h2&gt;
+
+&lt;p&gt;http://beiyuu.com/github-pages/&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
+     <title>开篇</title>
+     <link href="http://seikinmeid.github.io/opening"/>
+     <updated>2013-09-26T00:00:00+08:00</updated>
+     <id>http://beiyuu.com/opening</id>
+     <content type="html">&lt;h2&gt;我爱CoCo&lt;/h2&gt;
+
+&lt;p&gt;某一个时刻，看着你的样子，像是发现了世界上&lt;em&gt;独一无二&lt;/em&gt;的存在。&lt;/p&gt;
+
+&lt;p&gt;欣喜若狂，旷世宝藏。&lt;/p&gt;
+
+&lt;h2&gt;工作&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;游戏必备&lt;/em&gt;&lt;/p&gt;
+</content>
+   </entry>
+   
+ 
+</feed>
