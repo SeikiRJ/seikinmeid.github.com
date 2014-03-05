@@ -7,6 +7,9 @@ description: html学习的一些记录，第一天。
 
 <h4 style="color:green;font-size: 24px">HTML 学习笔记</h4>
 
+===
+备注：本文其实只是我的html备忘录，以防以后忘记什么可以回来再看看。
+
 开头`<!DOCTYPE html>`
 
 加粗 `<strong> </strong>`
