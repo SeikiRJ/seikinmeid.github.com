@@ -4,13 +4,46 @@
    <title>Seikinmeid's Blog</title>
    <link href="http://seikinmeid.github.io/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="http://seikinmeid.github.io" rel="alternate" type="text/html" />
-   <updated>2014-03-01T21:37:34+08:00</updated>
+   <updated>2014-03-03T14:38:37+08:00</updated>
    <id>http://seikinmeid.github.io</id>
    <author>
      <name></name>
      <email></email>
    </author>
 
+   
+   <entry>
+     <title>我发博客，我用Git</title>
+     <link href="http://seikinmeid.github.io/a-note-about-git"/>
+     <updated>2014-03-03T00:00:00+08:00</updated>
+     <id>http://beiyuu.com/a-note-about-git</id>
+     <content type="html">&lt;h2&gt;我发博客，我用Git&lt;/h2&gt;
+
+&lt;h3&gt;还有Markdown。。。&lt;/h3&gt;
+
+&lt;p&gt;首先，我再_post文件夹下面写了个md文件，叫做 &lt;em&gt;Hello_World.md&lt;/em&gt; ，那是磕巴磕巴照着md文档写的一篇日志神马的。&lt;/p&gt;
+
+&lt;p&gt;恩，我想想，在用 &lt;em&gt;Jekyll&lt;/em&gt; 预览过后觉得没有问题了，我要发布他！&lt;/p&gt;
+
+&lt;p&gt;首先，&lt;code&gt;git add &amp;lt;Hello_World.md&amp;gt;&lt;/code&gt;，告诉Git我要把这货拉近这次评优的候选列表！&lt;/p&gt;
+
+&lt;p&gt;接着，&lt;code&gt;git commit -m &#39;我要Hello World上头条&#39;&lt;/code&gt;， 这样Hello_World.md这货就被内定下来了！&lt;/p&gt;
+
+&lt;p&gt;最后，办法奖状，发头条&lt;code&gt;git push origin master&lt;/code&gt;. 恩，完毕！&lt;/p&gt;
+
+&lt;p&gt;以后还有什么git相关的东西再过来修改吧~~&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Markdown&lt;/p&gt;
+
+&lt;p&gt;一个 &quot;&lt;em&gt;&quot; 是斜体，两个 &quot;&lt;/em&gt;&quot; 是加粗，比如 &lt;em&gt;这样&lt;/em&gt; ，还有 &lt;strong&gt;这样&lt;/strong&gt; ！&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;加粗&lt;/strong&gt; or &lt;strong&gt;加粗&lt;/strong&gt; ( Cmd + B )&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;强调&lt;/em&gt; or &lt;em&gt;强调&lt;/em&gt; ( Cmd + I )&lt;/p&gt;
+</content>
+   </entry>
    
    <entry>
      <title>Mac osx Mavericks下Jekyll安装过程</title>
